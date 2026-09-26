@@ -1,52 +1,111 @@
-<h1 align="center"> DevLinks </h1>
+# Toranja Links
 
-<p align="center">
-Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
-<a href="https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito">Estude esse projeto em formato de vídeo clicando aqui.</a>
-</p>
+Uma página de links rápida, responsiva e acessível para reunir os canais oficiais de Henrique Maciel em um só lugar.
 
-<p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
-</p>
+O projeto foi desenvolvido com a identidade visual da [Toranja Tech](https://toranjatech.com.br/) e será publicado como uma página para bio de redes sociais, com domínio planejado em `link.toranjatech.com`.
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
+## Links disponíveis
 
-<br>
+- Kick
+- Instagram
+- TikTok
+- Twitch
+- YouTube
 
-<p align="center">
-  <img alt="projeto DevLinks" src=".github/preview.jpg" width="100%">
-</p>
+Cada canal é apresentado como um botão completo, com ícone, chamada e nome de usuário. Essa abordagem deixa a navegação mais clara do que uma lista formada somente por ícones.
 
-## 🚀 Tecnologias
+## Identidade visual
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+O layout utiliza as cores oficiais da Toranja Tech:
 
-- HTML e CSS
+- Laranja: `#F38A0F`
+- Amarelo: `#FFCD04`
+- Marrom escuro: `#1E1208`
+- Marrom café: `#300E00`
+
+As fontes utilizadas são Clash Display nos títulos e Inter nos textos da interface.
+
+## Tecnologias
+
+- HTML5
+- CSS3
 - JavaScript
-- Git e Github
-- Figma
+- SVG
+- Ionicons
 
-## 💻 Projeto
+## Estrutura do projeto
 
-O DevLinks é um agregador de links para usar como cartão de visitas online.
+```text
+devlinks-master/
+├── assets/
+│   ├── avatar.png
+│   ├── instagram.svg
+│   ├── kick.svg
+│   ├── tiktok.svg
+│   ├── toranja-mark.svg
+│   └── toranja-wordmark.svg
+├── index.html
+├── script.js
+└── style.css
+```
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
+## Como executar
 
-- [Assistir aulas](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
+Clone ou baixe o projeto e abra o arquivo `index.html` no navegador.
 
-## 🔖 Layout
+Para executar com um servidor local:
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+```bash
+python -m http.server 4173
+```
 
-## :memo: Licença
+Depois, acesse `http://localhost:4173`.
 
-Esse projeto está sob a licença MIT.
+## Como editar os links
 
----
+Os canais estão centralizados no array `socialLinks`, localizado no início do arquivo `script.js`:
 
-Feito atraves do projeto dev links 😁
+```js
+{
+  platform: "Instagram",
+  title: "Me siga no Instagram",
+  url: "https://www.instagram.com/zhenriquemaciel",
+  handle: "@zhenriquemaciel",
+  icon: { type: "image", source: "./assets/instagram.svg" },
+}
+```
+
+Para adicionar um canal, inclua um novo objeto no array. O cartão será renderizado automaticamente na página.
+
+## Acessibilidade e experiência
+
+- Layout mobile-first e responsivo
+- Áreas de toque amplas
+- Navegação por teclado
+- Foco visível nos elementos interativos
+- Rótulos descritivos para leitores de tela
+- Suporte a `prefers-reduced-motion`
+- Links externos protegidos com `noopener noreferrer`
+
+## Publicação na Vercel
+
+O projeto é totalmente estático e não exige etapa de build:
+
+1. Importe o repositório na Vercel.
+2. Selecione a opção de projeto estático.
+3. Mantenha os campos de build e diretório de saída vazios.
+4. Após a publicação, configure o domínio `link.toranjatech.com`.
+
+## Próximos passos
+
+- Criar um painel para cadastrar, editar e ordenar links
+- Persistir os dados em um banco de dados
+- Adicionar autenticação para administração
+- Medir cliques e desempenho de cada canal
+- Preparar espaços para monetização por anúncios
+
+## Créditos
+
+- Identidade visual: [Toranja Tech](https://toranjatech.com.br/)
+- Ícones de Kick, Instagram e TikTok: [Streamline](https://www.streamlinehq.com/)
+- Desenvolvimento: Henrique Maciel

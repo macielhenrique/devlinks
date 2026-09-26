@@ -1,78 +1,81 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Links oficiais de Henrique Maciel: Kick, Instagram, TikTok, Twitch e YouTube."
+    />
+    <meta name="theme-color" content="#1e1208" />
+
+    <link rel="preconnect" href="https://api.fontshare.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=inter@400,500,600&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./assets/toranja-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevLinks</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Henrique Maciel | Links oficiais</title>
   </head>
+
   <body>
-    <div id="container">
-      <div id="profile">
-        <img
-          src="./assets/avatar.png"
-          alt="Foto de Henrique Maciel sorrindo, usando óculos e camisa preta, barba e fundo branco."
-        />
-        <p>@macielhenriqueee</p>
-      </div>
+    <a class="skip-link" href="#links">Ir para os links</a>
 
-      <div id="switch" onclick="toggleMode()">
-        <button></button>
-        <span></span>
-      </div>
-
-      <ul>
-        <li>
-          <a href="https://github.com/macielhenrique">Ver meu portfólio</a>
-        </li>
-
-        <li>
-          <a href="mailto:jhenriquefmaciel@gmai.com" target="_blank"
-            >Gostou? Entre em contato 📧
-          </a>
-        </li>
-      </ul>
-      <div id="social-links">
-        <a href="https://github.com/macielhenrique" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-
-        <a href="https://instagram.com/macielhenriqueee" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-
+    <div class="page-shell">
+      <header class="brand-header" aria-label="Toranja Tech">
         <a
-          href="https://www.youtube.com/channel/UCctGXNjl1v53halOPZqqgdg"
+          class="brand-link"
+          href="https://toranjatech.com.br/"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visitar o site da Toranja Tech"
         >
-          <ion-icon name="logo-youtube"></ion-icon>
+          <img src="./assets/toranja-wordmark.svg" alt="Toranja Tech" />
         </a>
+        <span class="brand-pill">Links oficiais</span>
+      </header>
 
-        <a href="https://linkedin.com/in/henrique-maciel" target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </div>
+      <main>
+        <section class="profile" aria-labelledby="profile-name">
+          <div class="avatar-wrap">
+            <img
+              class="avatar"
+              src="./assets/avatar.png"
+              width="112"
+              height="112"
+              alt="Henrique Maciel sorrindo, usando óculos e camisa preta"
+            />
+            <span class="status-dot" aria-hidden="true"></span>
+          </div>
 
-      <footer>Feito por Henrique Maciel 😎</footer>
+          <div class="profile-copy">
+            <p class="eyebrow">Criador e fundador da Toranja Tech</p>
+            <h1 id="profile-name">Henrique Maciel</h1>
+            <p class="handle">@zhenriquemaciel</p>
+            <p class="intro">Lives, vídeos e conteúdo. Escolha onde quer me acompanhar.</p>
+          </div>
+        </section>
+
+        <nav id="links" class="link-list" aria-label="Redes e canais de Henrique Maciel"></nav>
+      </main>
+
+      <footer>
+        <span>Uma experiência</span>
+        <a
+          href="https://toranjatech.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Toranja Tech</a>
+      </footer>
     </div>
 
     <script
       type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
